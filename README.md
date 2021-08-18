@@ -1,2 +1,2 @@
 # grid-learning
-For educational porposes
+For educational purposes
