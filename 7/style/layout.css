@@ -1,0 +1,45 @@
+.d-grid {
+  display: grid;
+}
+
+.impl-vs-expl-grid {
+  grid-template-columns: 100px;
+  /* grid-template-rows: 150px 100px; */
+  /* grid-auto-columns: 100px; - правило для постороения неявного грида */
+  /* grid-auto-rows: 150px; - правило для постороения неявного грида */
+  grid-gap: 30px;
+}
+
+/* Неявный грид
+.impl-vs-expl-grid div:first-child {
+  grid-column-start: 3;
+  grid-column-end: 5;
+} */
+
+/* .impl-vs-expl-grid div:first-child { 
+  grid-column-start: 2;
+  grid-column-end: span 2;
+} */
+
+.auto-fill-grid {
+  /* grid-template-columns: repeat(auto-fill, 100px); */
+  grid-template-columns: repeat(auto-fill, minmax(100px, auto)); 
+  /* - выстраивает блоки по min значению */
+}
+
+.minmax-grid {
+  /* grid-template-columns: repeat(auto-fill, minmax(200px, 300px)); */
+  grid-template-columns: 1fr minmax(50px, 250px) 1fr 1fr;
+}
+
+.auto-fit-grid {
+  /* grid-template-columns: repeat(auto-fit, 100px); */
+  grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+  /* - выстраивает блоки по max значению */
+}
+
+.auto-flow-grid {
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 100px 100px;
+  /* grid-auto-flow: column; */
+}

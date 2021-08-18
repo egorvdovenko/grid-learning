@@ -1,0 +1,101 @@
+.d-grid {
+  display: grid;
+}
+
+.grid-ordering {
+  grid-template: repeat(3, 100px) / 1fr 1fr;
+}
+
+.grid-ordering div:nth-child(1) {
+  order: 6;
+}
+
+.grid-ordering div:nth-child(2) {
+  order: 5;
+}
+
+.grid-ordering div:nth-child(3) {
+  order: 4;
+}
+
+.grid-ordering div:nth-child(4) {
+  order: 3;
+}
+
+.grid-ordering div:nth-child(5) {
+  order: 2;
+}
+
+.grid-ordering div:nth-child(6) {
+  order: 1;
+}
+
+.grid-position-absolute {
+  grid-template: repeat(2, auto) / repeat(2, auto);
+  position: relative;
+}
+
+.grid-position-absolute div:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  grid-column: 2 / 3;
+  /* grid-row: 2 / 3; */
+}
+
+.grid-position-relative {
+  grid-template: repeat(2, auto) / repeat(2, auto);
+}
+
+.grid-position-relative div:nth-child(1) {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  /* grid-column: 2 / 3; */
+  /* grid-row: 2 / 3; */
+}
+
+/* .grid-position-fixed {
+  grid-template: repeat(2, auto) / repeat(2, auto);
+  position: relative;
+  height: 2000px;
+}
+
+.grid-position-fixed div:nth-child(1) {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+} */
+
+.grid-container {
+  height: 100vh;
+  margin: -20px;
+  display: grid;
+  grid-template-rows: 80px 1fr 80px;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+}
+
+.grid-container > * {
+  padding: 20px;
+}
+
+header {
+  grid-area: header;
+  position: sticky;
+  top: 0;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+  position: sticky;
+  bottom: 0;
+}

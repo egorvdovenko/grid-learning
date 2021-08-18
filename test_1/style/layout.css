@@ -1,0 +1,26 @@
+.d-grid {
+  display: grid;
+}
+
+.test-layout {
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(2, auto);
+}
+
+/* .test-layout div:first-child {
+  grid-column: 1 / 3;
+}
+
+
+.test-layout div:last-child {
+  grid-column: 3 / 5;
+} */
+
+.test-layout div:first-child {
+  grid-column: span 2;
+}
+
+
+.test-layout div:last-child {
+  grid-column: span 2;
+}

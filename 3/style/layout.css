@@ -1,0 +1,64 @@
+.d-grid {
+  display: grid;
+}
+
+.repeat-layout {
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(3, 200px);
+}
+
+.lines-layout {
+  grid-template-columns: repeat(6, 50px);
+  grid-template-rows: repeat(6, 50px);
+}
+
+.lines-layout div:nth-child(1) {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.lines-layout-play {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.lines-layout-play div:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.lines-layout-play div:nth-child(2) {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.lines-layout-play div:nth-child(6) {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.lines-name {
+  grid-template-columns: [start-column] 1fr 2fr 1fr [end-column];
+}
+
+.lines-name div:nth-child(1) {
+  grid-column-start: start-column;
+  grid-column-end: end-column;
+}
+
+.span-layout {
+  grid-template-columns: [start-column] 1fr 2fr 1fr [end-column];
+}
+
+.span-layout div:nth-child(1) {
+  grid-column: 1 / span 3;
+  grid-row: 1 / span 3;
+}
+
+/* span [n] - количество треков, которые должен занять элемент. */

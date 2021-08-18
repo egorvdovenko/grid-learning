@@ -1,0 +1,50 @@
+.d-grid {
+  display: grid;
+}
+
+/* 
+[...]-items - выравнивает элементы внутри grid-ячеек
+[...]-content - выравнивает grid-ячейки внутри grid-контейнера
+*/
+
+.place-items {
+  grid-template: repeat(3, 100px) / repeat(2, 100px);
+  align-items: start;
+  /* justify-items: center; */
+  /* place-items: center start; */
+  /* place-items: center; */
+  /* place-items совмещает align-items и justify-items */
+}
+
+/* .place-items div:nth-child(even) {
+  align-self: stretch;
+  justify-self: stretch;
+  place-self: stretch;
+} */
+/* place-self совмещает align-self и justify-self */
+
+.place-content {
+  grid-template: repeat(3, 100px) / repeat(2, 100px);
+  align-content: start;
+  /* align-content: center; */
+  /* align-content: space-around; */
+  /* align-content: space-between; */
+  /* justify-content: center; */
+  /* justify-content: space-around; */
+  /* justify-content: space-between; */
+  /* justify-content: space-evenly; */
+  /* place-content: center start; */
+  /* place-content: center; */
+  /* place-content совмещает align-content и justify-content */
+}
+
+/* .place-content div:nth-child(even) {
+  align-self: stretch;
+  justify-self: stretch;
+  place-self: stretch;
+} */
+
+.min-max-content {
+  grid-template-columns: 1fr min-content 1fr;
+  /* grid-template-columns: 1fr max-content 1fr; */
+}
